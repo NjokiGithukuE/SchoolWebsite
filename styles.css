@@ -1,0 +1,331 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* background-color: lightblue; */
+    /* font-family: 'Poppins', sans-serif; */
+  }
+  
+  body {
+    background-color: lightblue;
+  }
+  
+  html {
+    font-family: 'Poppins', sans-serif;
+    /* font-size: 62.5%; */
+  }
+  
+  /* Navbar */
+  li {
+    list-style: none;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+  .header {
+    border-bottom: 1px solid #E2E8F0;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+  }
+  
+  .hamburger {
+    display: none;
+  }
+  
+  .bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: #101010;
+  }
+  
+  .nav-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .nav-item {
+    margin-left: 5rem;
+  }
+  
+  .nav-link {
+    font-size: 1rem;
+    font-weight: 400;
+    color: #475569;
+  }
+  
+  .nav-link:hover {
+    color: #482ff7;
+  }
+  
+  .nav-logo {
+    font-size: 2.1rem;
+    font-weight: 500;
+    color: #482ff7;
+  }
+  
+  .nav-logo img {
+    height: 30px;
+  }
+  
+  /* Carousel */
+  .container {
+    width: 500px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    /*  box-shadow is from materialize css's website */
+    box-shadow: 0 24px 38px 3px rgba(0, 0, 0, 0.14),
+      0 9px 46px 8px rgba(0, 0, 0, 0.12), 0 11px 15px -7px rgba(0, 0, 0, 0.2);
+  }
+  
+  .container img {
+    width: 700px;
+    z-index: -2;
+  }
+  
+  button {
+    height: 10%;
+    border: none;
+    outline: none;
+    background: rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    padding: 1em;
+    display: flex;
+  }
+  
+  button .arrow {
+    border: solid #fff;
+    border-width: 0 4px 4px 0;
+    display: inline-block;
+    padding: 10px;
+    transition: transform 0.3s ease-out;
+    outline: none;
+  }
+  
+  #right-btn {
+    margin: auto 0 auto -2em;
+  }
+  
+  #right-btn .arrow {
+    transform: rotate(-45deg);
+  }
+  
+  #left-btn {
+    z-index: 0;
+    margin: auto -2em auto 0;
+  }
+  
+  #left-btn .arrow {
+    transform: rotate(135deg);
+  }
+  
+  /* Sections */
+  .section {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .section p {
+    align-content: center;
+  }
+  
+  .text-section {
+    flex: 1 1 300px;
+    text-align: left;
+    padding: 20px;
+    align-content: center;
+  }
+  
+  .image-section {
+    justify-content: flex-end;
+    float: 1 1 300px;
+    padding: 20px;
+    align-items: flex-end;
+  }
+  
+  .image-section img {
+    max-width: 100%;
+    height: 500px;
+    width: 700px;
+  }
+  
+  .image-section video {
+    width: 700px;
+    height: 500px;
+  }
+  
+  .carousel {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .about-section {
+    text-align: center;
+  }
+  
+  .about-section p {
+    font-size: 20px;
+  }
+  
+  /* Footer */
+  footer {
+    background-color: lightblue;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .contact-info {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+  
+  /* School profile  */
+  .student-card {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .student-number {
+    font-weight: bold;
+    margin-right: 10px;
+  }
+  
+  .student-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  
+  .student-details {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .student-name {
+    font-weight: bold;
+  }
+  
+  .teachers {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .teacher-image {
+    /* display: flex; */
+    /* flex-direction: column; */
+    justify-content: center;
+    margin-right: 50px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+  }
+  
+  @media only screen and (max-width: 768px) {
+  
+    /* Navbar */
+    .nav-menu {
+      position: fixed;
+      left: -100%;
+      top: 5rem;
+      flex-direction: column;
+      background-color: #fff;
+      width: 100%;
+      border-radius: 10px;
+      text-align: center;
+      transition: 0.3s;
+      box-shadow:
+        0 10px 27px rgba(0, 0, 0, 0.05);
+    }
+  
+    .nav-menu.active {
+      left: 0;
+    }
+  
+    .nav-item {
+      margin: 2.5rem 0;
+    }
+  
+    .hamburger {
+      display: block;
+      cursor: pointer;
+    }
+  
+    .hamburger.active .bar:nth-child(2) {
+      opacity: 0;
+    }
+  
+    .hamburger.active .bar:nth-child(1) {
+      transform: translateY(8px) rotate(45deg);
+    }
+  
+    .hamburger.active .bar:nth-child(3) {
+      transform: translateY(-8px) rotate(-45deg);
+    }
+  
+    /* About section */
+    .about {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  
+  /* School Profile-Teachers section */
+    .teacher-image {
+      display: flex;
+      flex-direction: column;
+    }
+  
+  /* Gallery page */
+  
+  .gallery {
+    border: 1px solid #ccc;
+  }
+  
+  .gallery:hover {
+    border: 1px solid #777;
+  }
+  
+  .gallery img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .desc {
+    padding: 15px;
+    text-align: center;
+  }
+  
+  .responsive {
+    padding: 0 6px;
+    float: left;
+    width: 24.99999%;
+  }
+  
+  @media only screen and (max-width: 700px) {
+    .responsive {
+      width: 49.99999%;
+      margin: 6px 0;
+    }
+  }
+  
+  @media only screen and (max-width: 500px) {
+    .responsive {
+      width: 100%;
+    }
+  }
